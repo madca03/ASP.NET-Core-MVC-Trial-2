@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDBFirstRestful", "EFCoreDBFirstRestful\EFCoreDBFirstRestful.csproj", "{0F8D2539-D563-41E3-A3BA-8B968A8EB44B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F8D2539-D563-41E3-A3BA-8B968A8EB44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8D2539-D563-41E3-A3BA-8B968A8EB44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8D2539-D563-41E3-A3BA-8B968A8EB44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8D2539-D563-41E3-A3BA-8B968A8EB44B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C34E334-AEFC-4A60-B3E9-8AD68B431BA2}
+	EndGlobalSection
+EndGlobal
