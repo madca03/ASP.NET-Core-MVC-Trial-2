@@ -68,6 +68,10 @@ Basic RESTful CRUD app using ASP.NET Core 3.1 MVC and Entity Framework Core DB F
 1. HTTP **PUT** and **DELETE** are available by default in ASP.NET Core MVC unlike in ASP.NET MVC 5.
 2. See this [link][attribute-routing-link] on the setup of the **Startup.cs** for REST APIs in ASP.NET Core
 
+## Todo:
+
+1. When deleting a skill resource, update also the employees with that skill (i.e. set to null value)
+
 [scaffold-dbcontext]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/powershell#scaffold-dbcontext
 [scaffold-dbcontext-tutorial1]: https://www.devart.com/dotconnect/postgresql/docs/EFCore-Database-First-NET-Core.html
 [attribute-routing-link]: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-3.1#attribute-routing-for-rest-apis

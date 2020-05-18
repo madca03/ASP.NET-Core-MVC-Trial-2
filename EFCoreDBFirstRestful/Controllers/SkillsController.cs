@@ -18,13 +18,7 @@ namespace EFCoreDBFirstRestful.Controllers
         [Route("api/[controller]")]
         public async Task<IActionResult> Index()
         {
-            var responseJson = new
-            {
-                status = APIResponseStatusCodes.SUCCESS,
-                result = await db.Skills.ToListAsync()
-            };
-
-            return Ok(responseJson);
+            return SendSuccessStatus(await db.Skills.ToListAsync());
         }
 
         // GET: /api/skills/:id
