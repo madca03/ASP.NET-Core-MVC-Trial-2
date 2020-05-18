@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EFCoreDBFirstRestful.Models
 {
-    public partial class testEFCoreContext : DbContext
+    public partial class EmployeeContext : DbContext
     {
-        public testEFCoreContext()
+        public EmployeeContext()
         {
         }
 
-        public testEFCoreContext(DbContextOptions<testEFCoreContext> options)
+        public EmployeeContext(DbContextOptions<EmployeeContext> options)
             : base(options)
         {
         }
@@ -22,8 +22,7 @@ namespace EFCoreDBFirstRestful.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-VRPV043O\\SQLEXPRESS;Initial Catalog=testEFCore;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+                optionsBuilder.UseSqlServer(Startup.GetConnectionString());
             }
         }
 
@@ -31,10 +30,8 @@ namespace EFCoreDBFirstRestful.Models
         {
             modelBuilder.Entity<Employees>(entity =>
             {
-                entity.HasKey(e => e.EmployeeId)
+                entity.HasKey(e => e.EmployeeID)
                     .HasName("PK__Employee__7AD04FF12D0B3BA0");
-
-                entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
 
                 entity.Property(e => e.EmployeeName)
                     .HasMaxLength(50)
@@ -43,16 +40,12 @@ namespace EFCoreDBFirstRestful.Models
                 entity.Property(e => e.PhoneNumber)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.SkillId).HasColumnName("SkillID");
             });
 
             modelBuilder.Entity<Skills>(entity =>
             {
-                entity.HasKey(e => e.SkillId)
+                entity.HasKey(e => e.SkillID)
                     .HasName("PK__Skills__DFA091E7EE3E376B");
-
-                entity.Property(e => e.SkillId).HasColumnName("SkillID");
 
                 entity.Property(e => e.Title)
                     .HasMaxLength(50)

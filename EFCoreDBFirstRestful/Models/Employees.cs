@@ -5,10 +5,10 @@ namespace EFCoreDBFirstRestful.Models
 {
     public partial class Employees
     {
-        public int EmployeeId { get; set; }
+        public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
         public string PhoneNumber { get; set; }
-        public int? SkillId { get; set; }
+        public int? SkillID { get; set; }
         public int? YearsExperience { get; set; }
     }
 }

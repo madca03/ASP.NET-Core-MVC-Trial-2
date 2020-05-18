@@ -5,7 +5,7 @@ namespace EFCoreDBFirstRestful.Models
 {
     public partial class Skills
     {
-        public int SkillId { get; set; }
+        public int SkillID { get; set; }
         public string Title { get; set; }
     }
 }
